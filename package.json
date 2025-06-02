@@ -1,0 +1,48 @@
+{
+  "name": "vscode-grep-encoding-search",
+  "displayName": "Grep Encoding Search",
+  "description": "Search using specified encoding from VS Code sidebar.",
+  "version": "0.0.1",
+  "publisher": "yourusername",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:grepEncodingSearch.setSearchEncoding"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "grepEncodingSearch.setSearchEncoding",
+        "title": "Grep: Set Search Encoding"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Grep Encoding Search",
+      "properties": {
+        "grepEncodingSearch.defaultEncoding": {
+          "type": "string",
+          "default": "UTF-8",
+          "description": "Default encoding used for grep search"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "echo \"No tests\""
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.75.0",
+    "typescript": "^4.8.4"
+  }
+}

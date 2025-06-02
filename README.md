@@ -53,6 +53,16 @@ VS Codeの `settings.json` でデフォルト文字コードを指定できま�
 
 ---
 
+## コマンドとデフォルト設定
+
+| コマンド | 説明 |
+| --- | --- |
+| **Grep: Set Search Encoding** | 検索に使用する文字コードを設定 |
+
+デフォルト設定は `grepEncodingSearch.defaultEncoding` で `"UTF-8"` が使われます。
+
+---
+
 ## サポートしている文字コード
 
 * UTF-8
