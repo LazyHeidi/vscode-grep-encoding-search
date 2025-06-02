@@ -1,0 +1,1 @@
+# vscode-grep-encoding-search
